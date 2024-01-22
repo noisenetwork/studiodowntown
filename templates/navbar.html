@@ -1,11 +1,23 @@
 {% load static %}
-<div style="background-color: aqua;">
-<h1>The StudioDowntown</h1>
 
-<ul>
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'news' %}">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
-
+<nav class="navbar navbar-expand-sm navbar_light bg-light">
+    <div class="container">
+    <a href="{% url 'home' %}" class="navbar-brand mb-0 h1">
+        <img 
+        class="d-inline-block align-top"
+        src="{% static 'img/yoga_pose.jpg' %}" 
+        width="30" height="30">
+        The Studio Downtown
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+        </li> 
+        <li class="nav-item active">
+            <a href="{% url 'news' %}" class="nav-link">News</a>
+        </li> 
+        </ul>
+    </div>
 </div>
+</nav>
